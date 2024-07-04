@@ -1,3 +1,4 @@
+cd ../Appliance-Shop-API
 git remote update
 UPSTREAM=${1:-'@{u}'}
 LOCAL=$(git rev-parse @)
