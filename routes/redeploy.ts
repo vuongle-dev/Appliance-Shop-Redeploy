@@ -18,6 +18,7 @@ const redeployData = (projectName: string) => {
   );
   form.append("request_time", now_time.toString());
   form.append("data", `{"project_name":"${projectName}"}`);
+  console.log(form);
   return form;
 };
 
