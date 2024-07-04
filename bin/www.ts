@@ -5,6 +5,7 @@
  */
 
 const debug = require("debug")("express-typescript:server");
+require("dotenv").config();
 import http from "http";
 import app from "../app";
 
