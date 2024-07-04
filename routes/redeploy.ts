@@ -37,7 +37,6 @@ redployRouter.get("/api", async (req: any, res: any, next: any) => {
     });
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
-    console.log(error);
     res.status(500).json({ error: "Restart Project error", errors: error });
   }
 });
@@ -55,7 +54,6 @@ redployRouter.post("/api", async (req: any, res: any, next: any) => {
     });
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
-    console.log(error);
     res.status(500).json({ error: "Restart Project error", errors: error });
   }
 });
@@ -73,7 +71,6 @@ redployRouter.get("/user", async (req: any, res: any, next: any) => {
     });
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
-    console.log(error);
     res.status(500).json({ error: "Restart Project error", errors: error });
   }
 });
@@ -91,7 +88,6 @@ redployRouter.post("/user", async (req: any, res: any, next: any) => {
     });
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
-    console.log(error);
     res.status(500).json({ error: "Restart Project error", errors: error });
   }
 });
@@ -105,7 +101,6 @@ redployRouter.get("/admin", async (req: any, res: any, next: any) => {
         .json({ error: "Redeploy Error", errors: result.stderr });
     return res.json({ message: "Redeploy success" });
   } catch (error: any) {
-    console.log(error);
     res.status(500).json({ error: "Internal server error", errors: error });
   }
 });
@@ -119,7 +114,6 @@ redployRouter.post("/admin", async (req: any, res: any, next: any) => {
         .json({ error: "Redeploy Error", errors: result.stderr });
     return res.json({ message: "Redeploy success" });
   } catch (error: any) {
-    console.log(error);
     res.status(500).json({ error: "Internal server error", errors: error });
   }
 });
