@@ -26,7 +26,7 @@ const nodejsRestartUrl = process.env.RESTART_URL;
 redployRouter.get("/api", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy.sh");
-    console.log(result);
+    console.log(result.stdout);
     if (result.stderr.length > 0)
       return res
         .status(500)
@@ -44,7 +44,7 @@ redployRouter.get("/api", async (req: any, res: any, next: any) => {
 redployRouter.post("/api", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy.sh");
-    console.log(result);
+    console.log(result.stdout);
     if (result.stderr.length > 0)
       return res
         .status(500)
@@ -62,7 +62,7 @@ redployRouter.post("/api", async (req: any, res: any, next: any) => {
 redployRouter.get("/user", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-user.sh");
-    console.log(result);
+    console.log(result.stdout);
     if (result.stderr.length > 0)
       return res
         .status(500)
@@ -80,7 +80,7 @@ redployRouter.get("/user", async (req: any, res: any, next: any) => {
 redployRouter.post("/user", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-user.sh");
-    console.log(result);
+    console.log(result.stdout);
     if (result.stderr.length > 0)
       return res
         .status(500)
@@ -98,7 +98,7 @@ redployRouter.post("/user", async (req: any, res: any, next: any) => {
 redployRouter.get("/admin", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-admin.sh");
-    console.log(result);
+    console.log(result.stdout);
     if (result.stderr.length > 0)
       return res
         .status(500)
@@ -111,7 +111,7 @@ redployRouter.get("/admin", async (req: any, res: any, next: any) => {
 redployRouter.post("/admin", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-admin.sh");
-    console.log(result);
+    console.log(result.stdout);
     if (result.stderr.length > 0)
       return res
         .status(500)
