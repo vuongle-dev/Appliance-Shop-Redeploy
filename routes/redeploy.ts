@@ -27,7 +27,7 @@ redployRouter.get("/api", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy.sh");
     console.log(result);
-    if (result.stderr)
+    if (result.stderr.length > 0)
       return res
         .status(500)
         .json({ error: "Redeploy Error", errors: result.stderr });
@@ -44,7 +44,7 @@ redployRouter.post("/api", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy.sh");
     console.log(result);
-    if (result.stderr)
+    if (result.stderr.length > 0)
       return res
         .status(500)
         .json({ error: "Redeploy Error", errors: result.stderr });
@@ -61,7 +61,7 @@ redployRouter.get("/user", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-user.sh");
     console.log(result);
-    if (result.stderr)
+    if (result.stderr.length > 0)
       return res
         .status(500)
         .json({ error: "Redeploy Error", errors: result.stderr });
@@ -78,7 +78,7 @@ redployRouter.post("/user", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-user.sh");
     console.log(result);
-    if (result.stderr)
+    if (result.stderr.length > 0)
       return res
         .status(500)
         .json({ error: "Redeploy Error", errors: result.stderr });
@@ -95,7 +95,7 @@ redployRouter.get("/admin", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-admin.sh");
     console.log(result);
-    if (result.stderr)
+    if (result.stderr.length > 0)
       return res
         .status(500)
         .json({ error: "Redeploy Error", errors: result.stderr });
@@ -108,7 +108,7 @@ redployRouter.post("/admin", async (req: any, res: any, next: any) => {
   try {
     const result = await exec("sh redeploy-admin.sh");
     console.log(result);
-    if (result.stderr)
+    if (result.stderr.length > 0)
       return res
         .status(500)
         .json({ error: "Redeploy Error", errors: result.stderr });
