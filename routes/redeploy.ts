@@ -35,6 +35,7 @@ redployRouter.get("/api", async (req: any, res: any, next: any) => {
     await axios.post(nodejsRestartUrl, redeployData("appliance_shop_api"), {
       headers: { "Content-Type": "multipart/form-data" },
     });
+    console.log("Restarted");
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
     res.status(500).json({ error: "Restart Project error", errors: error });
@@ -52,6 +53,7 @@ redployRouter.post("/api", async (req: any, res: any, next: any) => {
     await axios.post(nodejsRestartUrl, redeployData("appliance_shop_api"), {
       headers: { "Content-Type": "multipart/form-data" },
     });
+    console.log("Restarted");
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
     res.status(500).json({ error: "Restart Project error", errors: error });
@@ -69,6 +71,7 @@ redployRouter.get("/user", async (req: any, res: any, next: any) => {
     axios.post(nodejsRestartUrl, redeployData("appliance_shop_user"), {
       headers: { "Content-Type": "multipart/form-data" },
     });
+    console.log("Restarted");
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
     res.status(500).json({ error: "Restart Project error", errors: error });
@@ -86,6 +89,7 @@ redployRouter.post("/user", async (req: any, res: any, next: any) => {
     axios.post(nodejsRestartUrl, redeployData("appliance_shop_user"), {
       headers: { "Content-Type": "multipart/form-data" },
     });
+    console.log("Restarted");
     res.json({ message: "Redeploy success" });
   } catch (error: any) {
     res.status(500).json({ error: "Restart Project error", errors: error });
