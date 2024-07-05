@@ -8,9 +8,9 @@ BASE=$(git merge-base @ "$UPSTREAM")
 if [ $LOCAL = $REMOTE ]; then
     echo "Up-to-date"
 else
-    git reset -q --hard
+    git reset --hard 2>log && rm log
     echo "Pulling from git..."
-    git pull -q
+    git pull 2>log && rm log
     echo "Rebuilding..."
     /www/server/nodejs/v18.20.3/bin/yarn build
 fi
