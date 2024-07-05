@@ -12,6 +12,6 @@ else
     echo "Pulling from git..."
     git pull 2>log && rm log
     echo "Rebuilding..."
-    /www/server/nodejs/v18.20.3/bin/yarn build
+    /www/server/nodejs/v18.20.3/bin/yarn build 2>log && rm log
 fi
 

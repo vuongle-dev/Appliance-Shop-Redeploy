@@ -12,7 +12,7 @@ else
     echo "User: Pulling from git..."
     git pull 2>log && rm log
     echo "User: Rebuilding..."
-    /www/server/nodejs/v18.20.3/bin/yarn build
+    /www/server/nodejs/v18.20.3/bin/yarn build 2>log && rm log
     echo "User: Restarting project"
 fi
 
